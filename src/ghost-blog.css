@@ -162,6 +162,10 @@ hr {
   color: #e4e2ff;
 }
 
+a {
+  word-break: break-all;
+}
+
 .special {
   margin-top: 2em;
   margin-left: 2rem;
@@ -180,8 +184,4 @@ hr {
 
 .special hr {
   border-top: 1px solid #8b8c83;
-}
-
-a, p {
-  word-break: break-all;
 }
