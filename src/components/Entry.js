@@ -17,7 +17,8 @@ export default class Entry extends React.Component {
           <h1 className="title post-title">{title}</h1>
           <p className="post-excerpt">{excerpt}</p>
           <br />
-          <a href="#" onClick={() => {
+          <a href={"/?post=" + this.props.id} onClick={(e) => {
+            e.preventDefault();
             this.props.onPostClick(this.props.id);
           }} className="button is-light">Read More</a>
         </div>

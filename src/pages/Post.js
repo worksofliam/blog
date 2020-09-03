@@ -1,8 +1,30 @@
 import React from "react";
+import { motion } from "framer-motion"
 
 import '../ghost-blog.css';
 import Page from "../components/Page"
 import ReactMarkdown from "react-markdown";
+
+const container = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delay: 0.3,
+      when: "beforeChildren",
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const item = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1
+  }
+};
 
 class Post extends React.Component {
   constructor(props) {
@@ -40,58 +62,43 @@ class Post extends React.Component {
           });
         }
       )
-
-    if (window.history.pushState) {
-      var params = new URLSearchParams(window.location.search);
-      params.set('post', id);
-      var newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?' + params.toString();
-      window.history.pushState({path:newUrl},'',newUrl);
-    }
   }
 
   render() {
     const { error, isLoaded, post, id } = this.state;
 
-    if (isLoaded) {
-      return (
-        <div className="whitebg">
-          <Page>
-            <div className="hero-body">
-              <div className="container has-text-centered">
-                <a  href={"/?post=" + id}>
-                  <h1 className="title">
-                    {post.title}
-                  </h1>
-                </a>
-                <h2 className="subtitle">
-                  Posted on {new Date(post.created_at).toLocaleDateString()}
-                </h2>
-              </div>
-            </div>
-
-          </Page>
-          <div id="blogentry" className="container">
-            <div class="columns">
-              <div class="column"></div>
-              <div class="column is-three-quarters">
-                <ReactMarkdown source={post.body}></ReactMarkdown>
-              </div>
-              <div class="column"></div>
-            </div>
-          </div>
-        </div>
-      );
-    } else {
-      return (
+    return (
+      <motion.div
+        className="whitebg"
+        variants={container}
+        initial="hidden"
+        animate={isLoaded === true ? "visible" : "hidden"}
+        >
         <Page>
-        <div className="blog-posts">
-          <div className="container has-text-centered">
-            Loading blog.
+          <div className="hero-body">
+            <div className="container has-text-centered">
+              <a  href={"/?post=" + id}>
+                <h1 className="title">
+                  {post.title}
+                </h1>
+              </a>
+              <h2 className="subtitle">
+                Posted on {new Date(post.created_at).toLocaleDateString()}
+              </h2>
+            </div>
+          </div>
+        </Page>
+        <div id="blogentry" className="container">
+          <div class="columns">
+            <div class="column"></div>
+            <div class="column is-three-quarters">
+              <ReactMarkdown source={post.body}></ReactMarkdown>
+            </div>
+            <div class="column"></div>
           </div>
         </div>
-      </Page>
-      )
-    }
+      </motion.div>
+    );
   }
 }
 

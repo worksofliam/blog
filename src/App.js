@@ -7,6 +7,18 @@ import Home from "./pages/Home";
 import Blog from "./pages/Blog";
 import Post from "./pages/Post";
 
+function setBlogURL(id) {
+  var params = new URLSearchParams(window.location.search);
+  params.set('post', id);
+  var newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?' + params.toString();
+  window.history.pushState({path:newUrl},'',newUrl);
+}
+
+function resetURL() {
+  var newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+  window.history.pushState({path:newUrl},'',newUrl);
+}
+
 export default class App extends React.Component {
   constructor() {
     super();
@@ -40,12 +52,14 @@ export default class App extends React.Component {
                 <div id="navbarBasicExample" class="navbar-menu">
                   <div class="navbar-start">
                     <a onClick={() => {
+                      resetURL();
                       this.setState({
                         page: 'home'
                       });
                     }} className="navbar-item">Works Of Barry</a>
 
                     <a onClick={() => {
+                      resetURL();
                       this.setState({
                         page: 'blog'
                       });
@@ -88,6 +102,7 @@ export default class App extends React.Component {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -300 }}>
               <Blog onPostClick={(postID) => {
+                setBlogURL(postID);
                 this.setState({
                   page: 'post',
                   entryID: postID
