@@ -11,18 +11,10 @@ const container = {
     opacity: 1,
     scale: 1,
     transition: {
-      delay: 0.3,
+      delay: 0.1,
       when: "beforeChildren",
       staggerChildren: 0.1
     }
-  }
-};
-
-const item = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1
   }
 };
 
