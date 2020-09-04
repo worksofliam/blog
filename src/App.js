@@ -25,6 +25,7 @@ export default class App extends React.Component {
     super();
 
     this.state = {
+      burgerOpen: false,
       page: 'home',
       entryID: 0
     };
@@ -32,10 +33,8 @@ export default class App extends React.Component {
     const entryID = new URLSearchParams(window.location.search).get("post");
 
     if (entryID) {
-      this.state = {
-        page: 'post',
-        entryID
-      }
+      this.state.page = 'post';
+      this.entryID = entryID;
     }
   }
 
@@ -49,12 +48,24 @@ export default class App extends React.Component {
           <div class="blackbg-head">
             <div class="container">
               <nav class="navbar" role="navigation" aria-label="main navigation">
+                <a role="button" data-target="navMenu" aria-label="menu" aria-expanded="false"
+                  className={"navbar-burger " + (this.state.burgerOpen ? 'is-active' : null)} onClick={() => {
+                    this.setState({
+                      burgerOpen: !this.state.burgerOpen
+                    });
+                  }
+                }>
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                </a>
 
-                <div id="navbarBasicExample" class="navbar-menu">
+                <div id="navbarBasicExample" className={"navbar-menu " + (this.state.burgerOpen ? 'is-active' : null)}>
                   <div class="navbar-start">
                     <a onClick={() => {
                       resetURL();
                       this.setState({
+                        burgerOpen: false,
                         page: 'home'
                       });
                     }} className="navbar-item">Works Of Barry</a>
@@ -62,6 +73,7 @@ export default class App extends React.Component {
                     <a onClick={() => {
                       resetURL();
                       this.setState({
+                        burgerOpen: false,
                         page: 'blog'
                       });
                     }} className="navbar-item">Blog</a>
@@ -69,6 +81,7 @@ export default class App extends React.Component {
                     <a onClick={() => {
                       resetURL();
                       this.setState({
+                        burgerOpen: false,
                         page: 'work'
                       });
                     }} className="navbar-item">Work</a>

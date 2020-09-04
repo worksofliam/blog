@@ -37,7 +37,7 @@ hr {
   border-radius: 50%;
 }
 
-.navbar-menu {
+.navbar, .navbar-menu {
   background: #060606;
 }
 
