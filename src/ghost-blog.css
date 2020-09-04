@@ -160,9 +160,6 @@ hr {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   color: #e4e2ff;
-}
-
-a {
   word-break: break-all;
 }
 
@@ -184,4 +181,15 @@ a {
 
 .special hr {
   border-top: 1px solid #8b8c83;
+}
+
+#work {
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-top: 5em;
+}
+
+#work p {
+  color: white;
+  font-size: 1.2em;
 }

@@ -6,6 +6,7 @@ import './ghost-blog.css';
 import Home from "./pages/Home";
 import Blog from "./pages/Blog";
 import Post from "./pages/Post";
+import Work from "./pages/Work";
 
 function setBlogURL(id) {
   var params = new URLSearchParams(window.location.search);
@@ -64,6 +65,13 @@ export default class App extends React.Component {
                         page: 'blog'
                       });
                     }} className="navbar-item">Blog</a>
+
+                    <a onClick={() => {
+                      resetURL();
+                      this.setState({
+                        page: 'work'
+                      });
+                    }} className="navbar-item">Work</a>
                   </div>
 
                   <div class="navbar-end">
@@ -92,6 +100,16 @@ export default class App extends React.Component {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -300 }}>
               <Home />
+            </motion.div>
+          ) : null}
+
+          {page === "work" ? (
+            <motion.div
+              key="work"
+              initial={{ opacity: 0, x: 300 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -300 }}>
+              <Work />
             </motion.div>
           ) : null}
 
