@@ -16,7 +16,7 @@ export default function Home() {
               Liam Barry Allan
             </h1>
             <p>
-              Experienced software developer & IBM Champion with a background in Node.js and IBM i. Skilled in intgrating open-source tech with IBM i, development planning, and building applications to grow with the business.
+              Experienced software developer & IBM Champion with a background in Node.js and IBM i. Skilled in integrating open-source tech with IBM i, development planning, and building applications to grow with the business.
             </p>
             <p>
               Studied in Southampton in early life, but grown to become a speaker at many conferences in Europe and the Americas on many aspects of development. Loves to encourage the use of git with their RPG/COBOL code; to give businesses the tools and training to help achieve their goals. Believer in open-source.
