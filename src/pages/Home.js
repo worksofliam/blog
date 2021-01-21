@@ -14,7 +14,7 @@ export default function Home() {
           <div className="columns is-vcentered">
             <div className="column is-3"></div>
             <div className="column is-2">
-              <img className="image_round" src="https://pbs.twimg.com/profile_images/1250956399418507265/kCQ0a29S_400x400.jpg" width="200" height="200" />
+              <img className="image_round" src="https://pbs.twimg.com/profile_images/1346120714831736834/M9kuGK2F_400x400.jpg" width="200" height="200" />
             </div>
             <div className="column is-4">
               <h1 className="title">
@@ -83,7 +83,7 @@ export default function Home() {
                 icon="fa-chalkboard-teacher" />
               <hr />
               <Special 
-                title="IBM Champion 2017 - 2020"
+                title="IBM Champion 2017 - 2021"
                 text="I have been fortunate enough to be named an IBM Champion by IBM every year since 2017. I want to continue helping the community and industry in many ways that I can."
                 icon="fa-handshake" />
               <hr />

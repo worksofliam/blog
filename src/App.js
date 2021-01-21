@@ -33,21 +33,24 @@ export default class App extends React.Component {
     const entryID = new URLSearchParams(window.location.search).get("post");
 
     if (entryID) {
+      console.log('we have a blog: ' + entryID);
+
       this.state.page = 'post';
-      this.entryID = entryID;
+      this.state.entryID = entryID;
     }
   }
 
   render() {
     console.log('props:', this.props);
+    console.log(this.state);
     const {page, entryID} = this.state;
 
     return (
       <div>
-        <section class="blackbg is-medium">
-          <div class="blackbg-head">
-            <div class="container">
-              <nav class="navbar" role="navigation" aria-label="main navigation">
+        <section className="blackbg is-medium">
+          <div className="blackbg-head">
+            <div className="container">
+              <nav className="navbar" role="navigation" aria-label="main navigation">
                 <a role="button" data-target="navMenu" aria-label="menu" aria-expanded="false"
                   className={"navbar-burger " + (this.state.burgerOpen ? 'is-active' : null)} onClick={() => {
                     this.setState({
