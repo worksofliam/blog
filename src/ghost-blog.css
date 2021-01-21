@@ -114,6 +114,13 @@ hr {
   padding: revert;
 } 
 
+@media (max-width: 479px) {
+  #blogentry {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+}
+
 .columns {
   margin-top: revert;
 }
