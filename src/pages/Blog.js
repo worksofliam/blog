@@ -61,7 +61,7 @@ export default class Blog extends React.Component {
   }
 
   render() {
-    const { error, isLoaded, blogs } = this.state;
+    const { isLoaded, blogs } = this.state;
 
     return (
       <Page>

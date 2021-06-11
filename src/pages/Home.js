@@ -14,7 +14,7 @@ export default function Home() {
           <div className="columns is-vcentered">
             <div className="column is-3"></div>
             <div className="column is-2">
-              <img className="image_round" src="https://pbs.twimg.com/profile_images/1383777165003558919/1kZEK4t1_400x400.jpg" width="200" height="200" />
+              <img alt="" className="image_round" src="https://pbs.twimg.com/profile_images/1383777165003558919/1kZEK4t1_400x400.jpg" width="200" height="200" />
             </div>
             <div className="column is-4">
               <h1 className="title">

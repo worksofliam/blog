@@ -3,7 +3,6 @@ import React from "react";
 export default class Entry extends React.Component {
   render() {
     const {
-      id,
       title,
       excerpt
     } = this.props;

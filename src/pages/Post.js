@@ -57,7 +57,7 @@ class Post extends React.Component {
   }
 
   render() {
-    const { error, isLoaded, post, id } = this.state;
+    const { isLoaded, post, id } = this.state;
 
     return (
       <motion.div

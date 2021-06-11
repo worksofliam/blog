@@ -8,7 +8,7 @@ export default function Home() {
     <div>
         <div id="work" className="columns">
           <div className="column is-4">
-            <img src={process.env.PUBLIC_URL + "/images/cool.jpg"} />
+            <img alt="" src={process.env.PUBLIC_URL + "/images/cool.jpg"} />
           </div>
           <div className="column is-1"></div>
           <div className="column is-6" style={{marginTop: "3em"}}>
