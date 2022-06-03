@@ -14,7 +14,7 @@ export default function Home() {
           <div className="columns is-vcentered">
             <div className="column is-3"></div>
             <div className="column is-2">
-              <img alt="" className="image_round" src="https://pbs.twimg.com/profile_images/1383777165003558919/1kZEK4t1_400x400.jpg" width="200" height="200" />
+              <img alt="" className="image_round" src="https://pbs.twimg.com/profile_images/1459224800862392330/1F1OSAL3_400x400.jpg" width="200" height="200" />
             </div>
             <div className="column is-4">
               <h1 className="title">
@@ -57,10 +57,10 @@ export default function Home() {
               </Project>
             </div>
             <div className="columns">
-              <Project title="ILEditor 2" subtitle="Super fast, super cool, IBM i IDE">
+              <Project title="Code for IBM i" subtitle="Super fast, super cool, IBM i dev tools">
                 <p>
-                  <a href="https://ileditor.dev/">Website</a>
-                  <a href="https://www.itjungle.com/2020/05/06/ileditor-2-gives-ibm-i-shops-a-new-development-option/">ITJungle</a>
+                  <a href="https://github.com/halcyon-tech/vscode-ibmi">GitHub</a>
+                  <a href="https://marketplace.visualstudio.com/items?itemName=HalcyonTechLtd.code-for-ibmi">Marketplace</a>
                 </p>
               </Project>
               <Project title="Other stuff" subtitle="Other personal interests">
