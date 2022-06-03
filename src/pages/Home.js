@@ -83,7 +83,7 @@ export default function Home() {
                 icon="fa-chalkboard-teacher" />
               <hr />
               <Special 
-                title="IBM Champion 2017 - 2021"
+                title="IBM Champion 2017 - 2022"
                 text="I have been fortunate enough to be named an IBM Champion by IBM every year since 2017. I want to continue helping the community and industry in many ways that I can."
                 icon="fa-handshake" />
               <hr />
